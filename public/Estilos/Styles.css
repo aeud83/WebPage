@@ -50,7 +50,7 @@
 .mt-5{
   font-family: 'Baloo Tamma', cursive;
   font-size: 1rem;
-  color: #f5f5f5;
+  color: #A09696;
 }
 
 .vid-border{
@@ -66,6 +66,7 @@
 .btn{
 margin-top: 1rem;
 width: 19rem;
+
 }
 
 #vid {
@@ -76,14 +77,12 @@ width: 19rem;
   width: 30rem;
 }
 
-/* ************************************************************************** */
 body {
     margin: 0;
     padding: 0;
     overflow:hidden;
-
 }
-
+/* *************************FONDO de PAGINA Animacion************************************************* */
 .example2 {
     background: #f5f5f5;
     background: -webkit-linear-gradient(180deg, #f5f5f5 0%, #056 100%);
@@ -375,3 +374,34 @@ body {
       0 22px 30px rgba(0, 0, 0, 0.9);
       z-index: 1;
   }
+/* *****************BOTON de Registro****************************** */
+.boton{
+  margin-left: 0.7rem;
+  background: #056;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  box-shadow: 6px 6px 6px #999;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: 'Special Elite', cursive;
+  font-size: 28px;
+  height: 3.2rem;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  width: 18rem;
+  z-index: 2;
+}
+.boton:hover{
+	background:  rgba(255, 255, 255, 0.2);
+}
+.boton:active {
+	box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #181818;
+	border-bottom:1px solid #056;
+  text-shadow:  0px 0px 5px #fff, 0px 0px 5px #fff;
+	transform: translateY(3px);
+  transition: all 0.1s ease 0s;
+  margin: 20px auto 30px auto;
+}
