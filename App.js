@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express(); //instancia de express
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static("public")); //Se utiliza para Cargar los Archivos staticos locales
+app.use(express.static(__dirname)); //Se utiliza para Cargar los Archivos staticos locales
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/Index.html");//
