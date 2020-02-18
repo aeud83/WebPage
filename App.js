@@ -24,20 +24,20 @@ app.post("/", function(req, res) {
         email_address: mail,
         status: "subscribed",
         merge_fields:{
-          FNAME: nombre,
-          LNAME: apellido
+          FNAME: nombre, //Variables de la Pagina MailChimp
+          LNAME: apellido //Se Pueden Anexar Mas Variables
         }
       }
     ]
   };
 
-  var jsonData = JSON.stringify(data);
+  var jsonData = JSON.stringify(data); // se convierte el objeto data en formato JSON
 
-  var options = {
-    url: "https://us4.api.mailchimp.com/3.0/lists/2cdd45f56b",
+  var options = { //de esta forma se envia los datos, se autoriza y se guarda un nuevo contacto.
+    url: "https://us4.api.mailchimp.com/3.0/lists/2cdd45f56b", //audience ID: 2cdd45f56b
     method: "POST",
     headers:{
-      "Authorization": "aeud83 d15bfe897dfd7ccd747bf0e0c970dc48-us4"//Modelo de Autenticacion Basica en HTML
+      "Authorization": "aeud83 d15bfe897dfd7ccd747bf0e0c970dc48-us4"//Modelo de Autenticacion Basica en HTML /MailChimps Key: d15bfe897dfd7ccd747bf0e0c970dc48-us4
     },
     body: jsonData
   };
@@ -46,17 +46,15 @@ app.post("/", function(req, res) {
     if (error){
       console.log(error);
     } else {
-      console.log(response.statusCode);
+      console.log(response.statusCode); // se verifica la respuesta del servidor
     }
   });
-
 
 });
 
 app.listen(3000, function() {
   console.log("Servidor Corriendo en el Puerto 3000");
 });
-//*******************ANIMACIONES EXTRAS, BOTONES, CONTROLES Y MAS*********************************************
-//MailChimps Key: d15bfe897dfd7ccd747bf0e0c970dc48-us4
-//audience ID: 2cdd45f56b
+
 //console.log(nombre, apellido, mail);
+//*******************ANIMACIONES EXTRAS, BOTONES, CONTROLES Y MAS*********************************************
