@@ -45,8 +45,17 @@ app.post("/", function(req, res) {
   request(options, function(error, response, body){
     if (error){
       console.log(error);
+      //res.send("Hubo un error en el registro!!, por favor trate de Nuevo...");
+      res.sendFile(__dirname + "/ErrorPage.html");
     } else {
       console.log(response.statusCode); // se verifica la respuesta del servidor
+      if (response.statusCode === 200){
+        //res.send("El registro fue exitoso!!");
+        res.sendFile(__dirname + "/Success.html");
+      } else {
+        //res.send("Hubo un error en el registro!!, por favor trate de Nuevo...");
+        res.sendFile(__dirname + "/ErrorPage.html");
+      }
     }
   });
 

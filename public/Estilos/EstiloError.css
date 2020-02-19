@@ -1,94 +1,92 @@
+body {
+  min-height: 450px;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle, #056), rgba(255, 255, 255, 0.25), #1b2949, #fff);
+}
+
+.stage {
+  height: 300px;
+  width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 2rem; right:40rem; bottom: 10rem; left: 0;
+  perspective: 9999px;
+  transform-style: preserve-3d;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
+  animation-fill-mode: forwards;
+  transform: rotateY(40deg) rotateX(33deg) translateZ(0);
+}
+
+.layer:after {
+  font: 150px/0.65 'Pacifico', 'Kaushan Script', Futura, 'Roboto', 'Trebuchet MS', Helvetica, sans-serif;
+  content: 'ERROR\A   Registro!';
+  white-space: pre-wrap;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  color: darken(#fff, 4%);
+  letter-spacing: 5px;
+  text-shadow: 4px 0 10px hsla(0, 0%, 0%, .13);
+}
+
+$i: 1;
+$NUM_LAYERS: 20;
+@for $i from 1 through $NUM_LAYERS {
+  .layer:nth-child(#{$i}):after{
+    transform: translateZ(($i - 1) * -1.5px);
+  }
+}
+
+.layer:nth-child(n+#{round($NUM_LAYERS/2)}):after {
+  -webkit-text-stroke: 3px hsla(0, 0%, 0%, .25);
+}
+
+.layer:nth-child(n+#{round($NUM_LAYERS/2 + 1)}):after {
+  -webkit-text-stroke: 15px dodgerblue;
+  text-shadow: 6px 0 6px darken(dodgerblue,35%),
+               5px 5px 5px darken(dodgerblue,40%),
+               0 6px 6px darken(dodgerblue,35%);
+}
+
+.layer:nth-child(n+#{round($NUM_LAYERS/2 + 2)}):after {
+  -webkit-text-stroke: 15px darken(dodgerblue, 10%);
+}
+
+.layer:last-child:after {
+  -webkit-text-stroke: 17px hsla(0, 0%, 0%, .1);
+}
+
+.layer:first-child:after{
+  color: #fff;
+  text-shadow: none;
+}
+
+@keyframes ಠ_ಠ {
+  100% { transform: rotateY(-40deg) rotateX(-43deg); }
+}
+
+
+/*********************BASICO*************************************************************************************** */
 .Logo{
   position: relative;
   padding-top: 2rem;
   z-index: 1;
-  margin-right: 110rem;
-  padding-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 80rem;
   align-content: space-around;
 }
 
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 10px;
-  margin: auto;
-}
-.form-signin {
-  font-weight: 400;
-  z-index: 1;
-}
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.top {
-  margin-bottom: 0.1rem;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  z-index: 1;
-}
-.medio {
-  margin-bottom: 0.1rem;
-  z-index: 1;
-}
-
-.botton {
-  margin-bottom: 0.1rem;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  z-index: 1
-}
-.mb-4{
- width: 20rem;
- height: 12rem;
- z-index: -1;
- padding-bottom: 2rem;
-}
-
-.mb-3{
-  z-index: 1;
-  font-family: 'Special Elite', cursive;
-}
-
-.mt-5{
-  font-family: 'Baloo Tamma', cursive;
-  font-size: 1rem;
-  color: #A09696;
-}
-
-.vid-border{
-  position: relative;
-  height: 17.2rem;
-  width: 30rem;
-  border: 5px solid #f5f5f5;
-  overflow: hidden;
-  top: 8rem;
-  right: 5.2rem;
-  z-index: 1;
-}
-.btn{
-margin-top: 1rem;
-width: 19rem;
-
-}
-
-#vid {
-  padding-bottom: 13.3rem;
-  position: absolute;
-  left:-1px;
-  height: 30rem;
-  width: 30rem;
-}
-
 body {
-    margin: 0;
-    padding: 0;
     overflow:hidden;
 }
 /* *************************FONDO de PAGINA Animacion************************************************* */
@@ -383,34 +381,3 @@ body {
       0 22px 30px rgba(0, 0, 0, 0.9);
       z-index: 1;
   }
-/* *****************BOTON de Registro****************************** */
-.boton{
-  margin-left: 0.7rem;
-  background: #056;
-  border-bottom: 5px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  box-shadow: 6px 6px 6px #999;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-family: 'Special Elite', cursive;
-  font-size: 28px;
-  height: 3.2rem;
-  padding-top: 0px;
-  padding-bottom: 3px;
-  text-align: center;
-  transition: all 0.2s ease 0s;
-  width: 18rem;
-  z-index: 2;
-}
-.boton:hover{
-	background:  rgba(255, 255, 255, 0.2);
-}
-.boton:active {
-	box-shadow: 2px 2px 2px #777, 0px 0px 35px 0px #181818;
-	border-bottom:1px solid #056;
-  text-shadow:  0px 0px 5px #fff, 0px 0px 5px #fff;
-	transform: translateY(3px);
-  transition: all 0.1s ease 0s;
-  margin: 20px auto 30px auto;
-}
