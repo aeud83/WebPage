@@ -39,7 +39,7 @@ app.post("/", function(req, res) {
     headers:{
       "Authorization": "aeud83 d15bfe897dfd7ccd747bf0e0c970dc48-us4"//Modelo de Autenticacion Basica en HTML /MailChimps Key: d15bfe897dfd7ccd747bf0e0c970dc48-us4
     },
-    body: jsonData
+    // body: jsonData
   };
 
   request(options, function(error, response, body){
@@ -61,9 +61,14 @@ app.post("/", function(req, res) {
 
 });
 
+app.post("/ErrorPage",function(req,res){
+  res.redirect("/");
+});
+
 app.listen(3000, function() {
   console.log("Servidor Corriendo en el Puerto 3000");
 });
 
 //console.log(nombre, apellido, mail);
+
 //*******************ANIMACIONES EXTRAS, BOTONES, CONTROLES Y MAS*********************************************
