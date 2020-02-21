@@ -43,6 +43,13 @@ img{
   height: 220px;
 }
 
+.Texto-Error{
+  position: absolute;
+  font-size: 4rem;
+  top: 4rem;
+  left: 30rem;
+}
+
 .Texto-Grande{
   position: relative;
   margin-left: 34rem;

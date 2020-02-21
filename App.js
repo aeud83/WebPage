@@ -39,7 +39,7 @@ app.post("/", function(req, res) {
     headers:{
       "Authorization": "aeud83 d15bfe897dfd7ccd747bf0e0c970dc48-us4"//Modelo de Autenticacion Basica en HTML /MailChimps Key: d15bfe897dfd7ccd747bf0e0c970dc48-us4
     },
-    // body: jsonData
+    body: jsonData
   };
 
   request(options, function(error, response, body){
@@ -47,6 +47,7 @@ app.post("/", function(req, res) {
       console.log(error);
       //res.send("Hubo un error en el registro!!, por favor trate de Nuevo...");
       res.sendFile(__dirname + "/ErrorPage.html");
+      // $("#TME").text("Error Codigo: " + response.statusCode);******************************************ojo************** ver como pasar el valor
     } else {
       console.log(response.statusCode); // se verifica la respuesta del servidor
       if (response.statusCode === 200){
@@ -59,6 +60,10 @@ app.post("/", function(req, res) {
     }
   });
 
+});
+
+app.post("/Success", function (req, res){
+  res.redirect("/");
 });
 
 app.post("/ErrorPage",function(req,res){
