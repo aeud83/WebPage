@@ -9,6 +9,130 @@
   height: 230px;
 }
 
+.Tech{
+  position: absolute;
+  left: 22rem;
+  top: 2.9rem;
+  width: 8rem;
+}
+
+.Tech2{
+  position: absolute;
+  left: 30rem;
+  top: -1.5rem;
+  width: 17rem;
+
+}
+
+.tech3{
+  position: absolute;
+  top: 1rem;
+  left: 45rem;
+  width: 17rem;
+}
+
+.tech4{
+  position: absolute;
+  top: 1.5rem;
+  left: 62rem;
+  width: 6rem;
+}
+
+.tech5{
+  position: absolute;
+  top: -3rem;
+  left: 66rem;
+  width: 25rem;
+}
+
+.tech6{
+  position: absolute;
+  top: 0.5rem;
+  left: 88rem;
+  width: 13rem;
+}
+
+.tech7{
+  position: absolute;
+  top: 1.5rem;
+  left: 105rem;
+  width: 10rem;
+}
+
+.tech8{
+  position: absolute;
+  top: 18rem;
+  left: 2rem;
+  width: 20rem;
+}
+
+.tech9{
+  position: absolute;
+  top: 26rem;
+  left: 2rem;
+  width: 20rem;
+}
+
+.tech10{
+  position: absolute;
+  top: 38.5rem;
+  left: 4rem;
+  width: 15rem;
+}
+
+.tech11{
+  position: absolute;
+  top: 8rem;
+  left: 107.5rem;
+  width: 5rem;
+}
+
+.tech12{
+  position: absolute;
+  top: 51.5rem;
+  left: 115rem;
+  width: 5rem;
+  transform: rotate(50deg);
+}
+.tech13{
+  position: absolute;
+  top: 51rem;
+  left: 113.5rem;
+  width: 5rem;
+}
+
+.tech14{
+  position: absolute;
+  top: 51.5rem;
+  left: 112rem;
+  width: 5rem;
+  transform: rotate(-50deg);
+}
+
+.tech15{
+  position: absolute;
+  top: 18rem;
+  left: 106rem;
+  width: 10rem;
+
+}
+
+.tech16{
+  position: absolute;
+  top: 27rem;
+  left: 108.5rem;
+  width: 6rem;
+
+}
+
+.tech17{
+  position: absolute;
+  top: 37rem;
+  left: 106rem;
+  width: 12rem;
+
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
